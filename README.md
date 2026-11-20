@@ -73,3 +73,7 @@ We confirmed sample validity through six formal checks. Most notably, we verifie
 | Gemini | (https://share.gemini.google/GQsMV52eedRN) | Debugging pipeline errors (KeyError for linktype and epspxq), building the SIC 37 comparison pipeline, running Welch's t-tests and OLS regressions, and creating Figures 1–3. All results were independently checked. |
 
 ## Files
+notebooks/   Last_First_Project3.ipynb (runs top to bottom on WRDS JupyterHub)
+figures/     figure1.png, figure2.png, figure3.png, merge_map.png
+docs/        Last_First_Project3.pdf (slides)
+README.md
