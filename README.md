@@ -6,24 +6,38 @@
 Our client, American Express (AXP), operates in the nondepository credit industry (SIC 61). We evaluate whether quarterly earnings surprises (Standardized Unexpected Earnings, SUE) translate into immediate cumulative abnormal stock returns (CAR) around earnings announcements, and how this reaction compares to the transportation equipment sector (SIC 37).
 
 ## Main result
-*(Step 2 실행 후 Figure 1 이미지와 최종 수치를 채워 넣는 자리입니다)*
+Across 2021–2024, stock prices positively reward higher earnings surprises (SUE) and penalize negative surprises across both sectors, but credit institutions exhibit a much wider return spread.
+
+In SIC 61 (Credit/Finance, N=535), the average 3-day CAR rises from -2.44% in the Low SUE group to +0.14% in the Middle group and +3.36% in the High group, yielding a 5.80% return spread. In SIC 37 (Manufacturing, N=958), the reaction follows the same upward pattern with a smaller spread: -2.00% (Low), +0.07% (Middle), and +2.02% (High), resulting in a 4.01% return spread.
 
 ![Figure 1](figures/figure1.png)
 
 ## Is the difference real?
-*(Step 2 실행 후 t-test 및 회귀분석 결과와 Figure 2를 채워 넣는 자리입니다)*
+Yes, the earnings response differences are statistically significant in both sectors:
+
+- **Welch's two-sample t-test (High vs Low SUE):**
+  - SIC 61: Difference = +5.80%, t = 6.415, p < 0.0001
+  - SIC 37: Difference = +4.01%, t = 5.196, p < 0.0001
+  Both sectors reject the null hypothesis of equal returns between surprise groups.
+
+- **Simple OLS Regression (CAR = a + b * SUE):**
+  - SIC 61: b = 21.50 (p < 0.0001), R² = 0.0355
+  - SIC 37: b = 8.58 (p = 0.0181), R² = 0.0058
+  The earnings response coefficient (b) for credit institutions is more than double that of transportation manufacturers, showing that financial stock prices incorporate unexpected earnings revisions more aggressively into short-term valuations.
 
 ![Figure 2](figures/figure2.png)
 
 ## Why the industries differ
-*(Step 2 실행 후 두 산업의 특성 비교 분석과 Figure 3을 채워 넣는 자리입니다)*
+Transportation equipment (SIC 37) exhibits a higher frequency of negative earnings surprises compared to credit institutions (SIC 61). Manufacturing firms experience heavy cyclicality, supply chain delays, and large fixed asset overheads, causing operational disruptions that investors often treat as temporary frictions rather than permanent structural shifts. In contrast, credit institutions possess cleaner quarterly margin adjustments where earnings shocks directly alter book equity and credit quality, driving stronger immediate revaluations.
 
 ![Figure 3](figures/figure3.png)
 
 ## Advice for the client
-- **Business implication:** To be finalized based on comparative regression results.
-- **Limitation:** Backward-looking accounting surprises miss simultaneous qualitative forward-looking guidance releases.
-- **Next questions:** One predictive question (predicting future revisions) and one prescriptive question (optimal dividend/guidance timing).
+- **Business implication:** Because financial stocks respond twice as aggressively to surprise shocks as manufacturing firms (b = 21.50 vs 8.58), American Express must actively manage market expectations ahead of announcement dates to avoid sharp discount penalties from even modest downside misses.
+- **Limitation:** Standard backward-looking accounting surprises (SUE) do not account for qualitative forward guidance, dividend announcements, or macro interest rate commentary released simultaneously during earnings calls.
+- **Next questions:**
+  - *Predictive question:* Can machine learning sentiment scores from earnings call transcripts improve the prediction of post-announcement drift beyond numerical SUE?
+  - *Prescriptive question:* What is the optimal communication cadence for forward guidance revisions to minimize abnormal stock volatility around earnings dates?
 
 ## Data
 - Sources: Compustat (`comp.fundq`), CRSP (`crsp.dsf`, `crsp.dsi`), and the instructor link file (`ccm_link.csv`), accessed through WRDS.
