@@ -6,38 +6,38 @@
 Our client, American Express (AXP), operates in the nondepository credit industry (SIC 61). We evaluate whether quarterly earnings surprises (Standardized Unexpected Earnings, SUE) translate into immediate cumulative abnormal stock returns (CAR) around earnings announcements, and how this reaction compares to the transportation equipment sector (SIC 37).
 
 ## Main result
-Across 2021–2024, stock prices positively reward higher earnings surprises (SUE) and penalize negative surprises across both sectors, but credit institutions exhibit a much wider return spread.
+From 2021 to 2024, good earnings news brings higher stock prices, and bad news brings lower stock prices in both industries. However, credit firms react much more strongly than transportation firms.
 
-In SIC 61 (Credit/Finance, N=535), the average 3-day CAR rises from -2.44% in the Low SUE group to +0.14% in the Middle group and +3.36% in the High group, yielding a 5.80% return spread. In SIC 37 (Manufacturing, N=958), the reaction follows the same upward pattern with a smaller spread: -2.00% (Low), +0.07% (Middle), and +2.02% (High), resulting in a 4.01% return spread.
+For SIC 61 (Credit, N=535), the average 3-day stock return rises clearly from -2.44% in the Low group to +0.14% in the Middle group and +3.36% in the High group, creating a 5.80% difference. For SIC 37 (Manufacturing, N=958), stock returns follow the same pattern with a smaller gap: -2.00% (Low), +0.07% (Middle), and +2.02% (High), creating a 4.01% difference.
 
 ![Figure 1](figures/figure1.png)
 
 ## Is the difference real?
-Yes, the earnings response differences are statistically significant in both sectors:
+Yes, the test results show that the difference between good and bad news is real and not just luck:
 
-- **Welch's two-sample t-test (High vs Low SUE):**
+- **Welch's t-test (High vs. Low SUE):**
   - SIC 61: Difference = +5.80%, t = 6.415, p < 0.0001
   - SIC 37: Difference = +4.01%, t = 5.196, p < 0.0001
-  Both sectors reject the null hypothesis of equal returns between surprise groups.
+  Both sectors have p-values near zero, proving that stocks in the High group earn significantly more than stocks in the Low group.
 
-- **Simple OLS Regression (CAR = a + b * SUE):**
-  - SIC 61: b = 21.50 (p < 0.0001), R² = 0.0355
-  - SIC 37: b = 8.58 (p = 0.0181), R² = 0.0058
-  The earnings response coefficient (b) for credit institutions is more than double that of transportation manufacturers, showing that financial stock prices incorporate unexpected earnings revisions more aggressively into short-term valuations.
+- **Simple Regression (CAR = a + b * SUE):**
+  - SIC 61: slope (b) = 21.50 (p < 0.0001), R² = 0.0355
+  - SIC 37: slope (b) = 8.58 (p = 0.0181), R² = 0.0058
+  The slope for credit firms is more than two times larger than the slope for manufacturing firms (21.50 vs. 8.58). This means stock prices for financial firms move much faster and harder when new earnings numbers come out.
 
 ![Figure 2](figures/figure2.png)
 
 ## Why the industries differ
-Transportation equipment (SIC 37) exhibits a higher frequency of negative earnings surprises compared to credit institutions (SIC 61). Manufacturing firms experience heavy cyclicality, supply chain delays, and large fixed asset overheads, causing operational disruptions that investors often treat as temporary frictions rather than permanent structural shifts. In contrast, credit institutions possess cleaner quarterly margin adjustments where earnings shocks directly alter book equity and credit quality, driving stronger immediate revaluations.
+Transportation equipment makers (SIC 37) report bad earnings news more often than credit firms (SIC 61). Manufacturing companies deal with factory delays, rising parts costs, and expensive machinery. Because of this, investors often view negative earnings as short-term problems rather than permanent damage. In contrast, credit firms make money directly from loans and interest. When a financial firm misses its profit target, it immediately hurts book value and shareholder capital, leading to a much larger stock drop. 
 
 ![Figure 3](figures/figure3.png)
 
 ## Advice for the client
-- **Business implication:** Because financial stocks respond twice as aggressively to surprise shocks as manufacturing firms (b = 21.50 vs 8.58), American Express must actively manage market expectations ahead of announcement dates to avoid sharp discount penalties from even modest downside misses.
-- **Limitation:** Standard backward-looking accounting surprises (SUE) do not account for qualitative forward guidance, dividend announcements, or macro interest rate commentary released simultaneously during earnings calls.
+- **Business takeaway:** Financial stocks react twice as strongly to earnings surprises as manufacturing stocks (slope of 21.50 vs. 8.58). American Express must guide market expectations carefully before announcement days, because even a small earnings miss can trigger a sharp drop in stock price.
+- **Limitation:** Our surprise measure (SUE) looks only at past accounting numbers. It does not capture spoken management guidance, dividend increases, or interest rate comments shared during the live earnings call.
 - **Next questions:**
-  - *Predictive question:* Can machine learning sentiment scores from earnings call transcripts improve the prediction of post-announcement drift beyond numerical SUE?
-  - *Prescriptive question:* What is the optimal communication cadence for forward guidance revisions to minimize abnormal stock volatility around earnings dates?
+  - *Predictive question:* Can we use text sentiment from earnings call transcripts to better predict stock moves after the announcement?
+  - *Prescriptive question:* What is the best time for managers to update earnings guidance to avoid large stock swings on announcement days?
 
 ## Data
 - Sources: Compustat (`comp.fundq`), CRSP (`crsp.dsf`, `crsp.dsi`), and the instructor link file (`ccm_link.csv`), accessed through WRDS.
