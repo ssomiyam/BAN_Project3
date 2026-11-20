@@ -43,7 +43,7 @@ Transportation equipment makers (SIC 37) report bad earnings news more often tha
 - Sources: Compustat (`comp.fundq`), CRSP (`crsp.dsf`, `crsp.dsi`), and the instructor link file (`ccm_link.csv`), accessed through WRDS.
 - **The data are not included in this repository** because of the WRDS license. Someone with WRDS access can rebuild the results by running the notebook with the link file in the same folder.
 - Sample period: Earnings announcements from January 2021 to December 2024.
-- Filters: Valid announcement date (`rdq`), SUE calculable, prior-quarter stock price $\ge \$5$, $|SUE| \le 1$, and complete 3-day abnormal return window $[-1, 0, +1]$.
+- Filters: Valid announcement date (`rdq`), SUE calculable, prior-quarter stock price >= $5, $|SUE| \le 1$, and complete 3-day abnormal return window $[-1, 0, +1]$.
 
 ## How the tables fit together
 ![Merge map](figures/merge_map.png)
