@@ -67,8 +67,9 @@ We confirmed sample validity through six formal checks. Most notably, we verifie
 | **Part 2 (Code Tip):** Client gvkey was hardcoded across multiple cells. | Programmatically looked up `CLIENT_GVKEY` from `CLIENT_TICKER = "AXP"` once at the top of the notebook and dynamically referenced the variable throughout. | The output numbers remained identical, but the pipeline became dynamic and reusable for other client firms. |
 
 ## Where the code came from
+
 | AI tool | Link (or PDF in docs/) | What I used it for |
-| --- | --- | --- |
-| Gemini | docs/Gemini_Project3_Session.pdf | Assistance with comparative data pipeline, t-test, OLS regression models, and visualizations. |
+| :--- | :--- | :--- |
+| Gemini | (https://share.gemini.google/GQsMV52eedRN) | Debugging pipeline errors (KeyError for linktype and epspxq), building the SIC 37 comparison pipeline, running Welch's t-tests and OLS regressions, and creating Figures 1–3. All results were independently checked. |
 
 ## Files
