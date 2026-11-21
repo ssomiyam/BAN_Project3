@@ -70,7 +70,7 @@ We confirmed sample validity through six formal checks. Most notably, we verifie
 
 | AI tool | Link (or PDF in docs/) | What I used it for |
 | :--- | :--- | :--- |
-| Gemini | (https://share.gemini.google/GQsMV52eedRN) | Debugging pipeline errors (KeyError for linktype and epspxq), building the SIC 37 comparison pipeline, running Welch's t-tests and OLS regressions, and creating Figures 1–3. All results were independently checked. |
+| Gemini | (https://share.gemini.google/GQsMV52eedRN) | Debugging pipeline errors (KeyError for linktype and epspxq), building the SIC 37 comparison pipeline, running Welch's t-tests and OLS regressions, and creating Figures 1–3. All results were independently checked. | Gemini | (https://share.gemini.google/eVtvyczwxDI6) | Makikng presentation |
 
 ## Files
 notebooks/   Kim_Minsong_Project3.ipynb (runs top to bottom on WRDS JupyterHub)
