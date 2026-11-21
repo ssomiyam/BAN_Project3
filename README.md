@@ -36,8 +36,8 @@ Transportation equipment makers (SIC 37) report bad earnings news more often tha
 - **Business takeaway:** Financial stocks react twice as strongly to earnings surprises as manufacturing stocks (slope of 21.50 vs. 8.58). American Express must guide market expectations carefully before announcement days, because even a small earnings miss can trigger a sharp drop in stock price.
 - **Limitation:** Our surprise measure (SUE) looks only at past accounting numbers. It does not capture spoken management guidance, dividend increases, or interest rate comments shared during the live earnings call.
 - **Next questions:**
-  - *Predictive question:* Can we use text sentiment from earnings call transcripts to better predict stock moves after the announcement?
-  - *Prescriptive question:* What is the best time for managers to update earnings guidance to avoid large stock swings on announcement days?
+  - *Predictive question:* Can we use text sentiment from earnings call transcripts to better predict stock moves after the announcement? (Additional data needed: Form 8-K filings and earnings call transcripts with NLP sentiment metrics).
+  - *Prescriptive question:* What is the best time for managers to update earnings guidance to avoid large stock swings on announcement days? (Additional data needed: Historical management guidance timestamps and consensus revision tracking from I/B/E/S).
 
 ## Data
 - Sources: Compustat (`comp.fundq`), CRSP (`crsp.dsf`, `crsp.dsi`), and the instructor link file (`ccm_link.csv`), accessed through WRDS.
@@ -73,7 +73,7 @@ We confirmed sample validity through six formal checks. Most notably, we verifie
 | Gemini | (https://share.gemini.google/GQsMV52eedRN) | Debugging pipeline errors (KeyError for linktype and epspxq), building the SIC 37 comparison pipeline, running Welch's t-tests and OLS regressions, and creating Figures 1–3. All results were independently checked. |
 
 ## Files
-notebooks/   Last_First_Project3.ipynb (runs top to bottom on WRDS JupyterHub)
+notebooks/   Kim_Minsong_Project3.ipynb (runs top to bottom on WRDS JupyterHub)
 figures/     figure1.png, figure2.png, figure3.png, merge_map.png
-docs/        Last_First_Project3.pdf (slides)
+docs/        Kim_Minsong_Project3.pdf
 README.md
